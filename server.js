@@ -26,7 +26,8 @@ const dummy = {
   ]
 }
 
-hbs.registerPartials(__dirname + '/views');
+// using handlebars partials in server side.
+hbs.registerPartials(__dirname + '/views/');
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
@@ -41,7 +42,7 @@ app.use(webpackDevMiddleware(compiler, {
 app.use(webpackHotMiddleware(compiler));
 
 app.get('/', (req, res) => {
-  res.render('index', dummy);
+  res.sendFile(path.resolve(__dirname, 'views/index.html'));
 });
 
 app.listen(port, () => {

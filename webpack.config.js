@@ -4,15 +4,25 @@ const path = require('path');
 module.exports = {
   entry: [
     'webpack-hot-middleware/client',
-    './public/people.js'
+    './public/main.js'
   ],
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
     publicPath: '/public'
   },
+  // using handlebars modules
+  // resolve: {
+  //   alias: {
+  //     handlebars: 'handlebars/dist/handlebars.min.js'
+  //   }
+  // },
   module: {
     loaders: [
+      {
+        test: /\.hbs$/,
+        loader: 'handlebars-loader'
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
