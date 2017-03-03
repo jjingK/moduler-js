@@ -5,23 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="/public/common.css" />
 </head>
 <body>
-  <div class="container" id="peopleModule">
-    <h1><span class="highlight">JS</span> moduler</h1>
-    <form action="" class="form">
-      <input type="text" name="name" placeholder="Input your name">
-      <button type="submit">ADD</button>
-    </form>
-    <ul class="lists">
-      <script id="people-template" type="text/x-handlebars-template">
-        {{#each people}}
-          <li><span>{{.}}</span> <a href="" class="del">x</a></li>
-        {{/each}}
-      </script>
-      <!-- {{>lists}} -->
-    </ul>
+  <div class="container">
+    <div class="status" id="statusModule">
+    </div>
+    <div class="people" id="peopleModule">
+      <h1><span class="highlight">JS</span> moduler</h1>
+      <form action="" class="form">
+        <input type="text" name="name" placeholder="Input your name">
+        <button type="submit">ADD</button>
+      </form>
+      <ul class="lists">
+        <!-- <script id="people-template" type="text/x-handlebars-template">
+          {{#each people}}
+            <li><span>{{.}}</span> <a href="" class="del">x</a></li>
+          {{/each}}
+        </script> -->
+      </ul>
+    </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="/public/bundle.js"></script>
