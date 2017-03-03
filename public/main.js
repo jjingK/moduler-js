@@ -1,10 +1,14 @@
-// const people = require('./revealing');
-// global.people = people;
-const listsTpl = require('./lists.hbs');
-(function() {
-  const lists = document.getElementsByClassName('lists')[0];
-  lists.innerHTML = listsTpl( { people: ['Sang', 'Kwon', 'Kim', 'Kang'] });
-})();
+require('./css/common.css');
+
+import events from './pubSub';
+import status from './status';
+import people from './revealing';
+
+global.modules = {
+  events,
+  status,
+  people
+};
 
 // Requried: Hot Reloading
 if (module.hot) {
