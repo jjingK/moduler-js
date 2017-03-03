@@ -17,11 +17,22 @@ input, button {
   font-family: inherit;
 }
 
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
 }
 
 .container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.people {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +54,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  max-width: 600px;
+  /*max-width: 600px;*/
   margin-top: 30px;
 }
 
@@ -111,4 +122,9 @@ button:hover {
   width: 30%;
   font-size: var(--font-size);
   border-radius: 0 5px 5px 0;
+}
+
+.status h2 {
+  display: inline-block;
+  margin: 0;
 }

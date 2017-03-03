@@ -12,13 +12,17 @@ module.exports = {
     publicPath: '/public'
   },
   // using handlebars modules
-  // resolve: {
-  //   alias: {
-  //     handlebars: 'handlebars/dist/handlebars.min.js'
-  //   }
-  // },
+  resolve: {
+    alias: {
+      handlebars: 'handlebars/dist/handlebars.min.js'
+    }
+  },
   module: {
     loaders: [
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader']
+      },
       {
         test: /\.hbs$/,
         loader: 'handlebars-loader'
